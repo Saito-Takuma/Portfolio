@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>トイタン</title>
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<header class="header">
+		<h1 class="site-name">トイタン</h1>
+		<div class="setting"><img src="img/haguruma.png" alt=""></div>
+	</header>
+	
+	<div class="contents">
+		<div class="key key--detail">
+			<h1 id="question-title"></h1>
+			<button id="question-voice"><img src="img/voice.svg" alt=""></button>
+		</div>
+		<div class="wrap">
+			<p id="question-text"></p>
+			<div id="anser-open">解答を見る</div>
+			<div id="check" class=""></div>
+		</div>
+	</div>
+
+	<nav class="nav nav--detail">
+		<a href="index.html"><img src="./img/icon_home.svg" alt=""></a>
+		<a href="list.html" class="nav-check"><img src="./img/icon_list.svg" alt=""></a>
+		<div class="pager">
+			<a href="" id="prev"><img src="img/arrow_left.svg" alt=""></a>
+			<a href="" id="next"><img src="img/arrow_right.svg" alt=""></a>
+		</div>
+	</nav>
+	
+	<script src="js/questions.js"></script>
+	<script src="js/config.js"></script>
+	<script>
+			
+			const qid = Number(getParam('qid'));
+			const info = questions[qid - 1];
+			const $next = document.getElementById('next');
+			const $prev = document.getElementById('prev');
+			const $check = document.getElementById('check');
+
+			let check_flg = false;
+
+			if( info === undefined ){
+				location.href = 'index.html';
+			}
+			if( qid >=  questions.length ){
+				$next.style.display = "none";
+			}
+			if( qid <=  1){
+				$prev.style.display = "none";
+			}
+
+
+
+			if( checks.indexOf(qid) !==  -1 ){
+		  	$check.setAttribute('class', 'is-check');
+				check_flg = true;
+		  }
+
+
+
+
+			document.getElementById('question-title').innerHTML = info['title'];
+			document.getElementById('question-text').innerHTML = info['text'];
+
+			$prev.setAttribute('href', `detail.html?qid=${qid - 1}`);
+		  $next.setAttribute('href', `detail.html?qid=${qid + 1}`);
+
+		  document.getElementById('question-voice').addEventListener('click', (() => {
+		  	uttr.text = info['title'];
+		    speechSynthesis.cancel(uttr);//連打読み防止
+		    speechSynthesis.speak(uttr);//読み上げ
+		  }) , false);
+
+			document.getElementById('anser-open').addEventListener('click', (e) => {
+		    document.getElementById('question-text').classList.add('show');
+		    e.target.style.display = "none";
+		  });
+
+
+
+		  $check.addEventListener('click', (e) => {
+		    if( check_flg ){
+	  			checks.splice(checks.indexOf(qid), 1);
+	  			e.target.classList.remove('is-check');
+		  	}else{
+		  		checks.push(qid);
+		  		e.target.classList.add('is-check');
+		  	}
+		  	check_flg = !check_flg;
+		    localStorage.setItem('check', checks);
+		  });
+
+
+		  
+
+	</script>
+</body>
+</html>

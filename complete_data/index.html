@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<header class="header">
+		<h1 class="site-name">トイタン</h1>
+	</header>
+
+	
+	<div class="contents">
+		<div class="key key--top">
+			<h1>トイタン</h1>
+			<h2>TOEICで使う単語を攻略しよう！</h2>
+		</div>
+		<div id="score">
+			<div id="score-title">現在のスコア</div>
+			<div id="score-num"><span id="score-num-check"></span> / <span id="score-num-all"></span></div>
+			<div id="score-rank"></div>
+		</div>
+		<div id="list"></div>
+	</div>
+
+	<nav class="nav">
+		<a href="index.html"><img src="./img/icon_home.svg" alt=""></a>
+		<a href="list.html" class="nav-check"><img src="./img/icon_list.svg" alt=""></a>
+	</nav>
+
+
+
+
+	<script src="js/questions.js"></script>
+	<script src="js/config.js"></script>
+	<script>
+		const $list = document.getElementById('list');
+		document.getElementById('score-rank').innerHTML = getRank();
+		document.getElementById('score-num-check').innerHTML = checks.length;
+		document.getElementById('score-num-all').innerHTML = questions.length;
+
+
+		questions.forEach((question) => {
+			const is_check = (checks.indexOf(question['id']) !== -1 ) ? 'is-check' : '';
+			$a = `<a href="detail.html?qid=${question['id']}" class="link ${is_check}">${question['title']}</a>`;
+			$list.insertAdjacentHTML('beforeend', $a);
+		});
+
+		
+	</script>
+
+
+
+
+</body>
+</html>
