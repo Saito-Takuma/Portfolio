@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+/* 共通クラスここから */
+.inner{
+	width: 1104px;
+}
+/* 共通クラスここまで */
+
+/* ヘッダーここから */
+.header{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	height: 48px;
+	z-index: 10;
+}
+.header-logo{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	width: 89px;
+	height: 100%;
+	padding: 4px 16px;
+}
+.header-logo img{
+	height: 100%;
+}
+.header-nav{
+	position: absolute;
+	top: 50%;
+	left: calc(89px + 24px);
+	display: flex;
+	transform: translateY(-50%);
+	height: 100%;
+}
+.header-nav a{
+	color: #FFF;
+	text-decoration: none;
+	font-size: 13px;
+	margin-right: 40px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.header-nav a:hover{
+	border-bottom: 4px solid #EA4F8B;
+}
+/* ヘッダーここまで */
+
+/* アカウントここから */
+.account{
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	display: flex;
+	padding: 0 32px 0 16px;
+	align-items: center;
+	border-left: 1px solid #51565C;
+}
+.account:after{
+	content: "▼";
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 10px;
+	color: #51565C;
+}
+.account-icon{
+	width: 32px;
+	margin-right: 8px;
+}
+.account-icon img{
+	width: 100%;
+	border-radius: 50%;
+}
+.account-name{
+	color: #fff;
+	font-size: 13px;
+}
+/* アカウントここまで */
+
+.contents{
+	padding-top: 48px;
+	background: url(../img/course_bg.svg) center center no-repeat;
+	background-size: cover;
+}
+
+/* キービジュアルここから */
+.keyvisual{
+	position: relative;
+	height: 480px;
+	background-image: url(../img/kv_bg.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.keyvisual-text{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/* キービジュアルここまで */
+
+/* コース一覧ここから */
+.section{
+	padding: 80px 0 130px 0;
+}
+.section-icon{
+	text-align: center;
+	margin-bottom: 18px;
+}
+.section-title{
+	text-align: center;
+	color: #F0EBCE;
+	font-size: 24px;
+	margin-bottom: 57px;
+}
+.courses{
+	margin: 0 auto 160px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.course{
+	width: 240px;
+	padding: 32px 24px;
+	background: #000000;
+	box-shadow: 0 0 8px #F0EBCE;
+	margin-right: 48px;
+	margin-bottom: 48px;
+	border-radius: 4px;
+}
+.course:last-child,
+.course:nth-child(4n){
+	margin-right: 0;
+}
+.course:nth-child(n + 5) {
+	margin-bottom: 0;
+}
+.course-title{
+	color: #FFFFFF;
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.course-count{
+	text-align: center;
+	color: #D6D6D6;
+	margin-bottom: 26px;
+}
+.course-logo{
+	width: 100px;
+	margin: 0 auto 40px auto;
+}
+.course-logo img{
+	width: 100%;
+}
+.course-btn{
+	display: block;
+	width: 157px;
+	margin: 0 auto;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 14px 0;
+	background-color: #B40053;
+	text-decoration: none;
+	border-radius: 2px;
+}
+/* コース一覧ここまで */
+
+/* バナーここから */
+.banners{
+	margin: 0 auto;
+	display: flex;
+}
+.banners a{
+	display: block;
+}
+.banners a:first-child{
+	margin-right: 44px;
+}
+/* バナーここまで */
+
+/* フッターここから */
+.footer{
+	position: relative;
+	padding: 78px 0 24px 0;
+	background-color: #000;
+}
+.footer-logo{
+	width: 100px;
+	position: absolute;
+	top: -40px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.footer-logo img{
+	width: 100%;
+}
+.footer-nav{
+	text-align: center;
+	margin-bottom: 80px;
+}
+.footer-nav a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 13px;
+	margin-right: 40px;
+}
+.footer-nav a:last-child{
+	margin-right: 0;
+}
+.copyright{
+	color: #fff;
+	text-align: center;
+	font-size: 11px;
+}
+/* フッターここまで */
