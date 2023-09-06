@@ -32,7 +32,7 @@ body{
 .header-nav{
 	position: absolute;
 	top: 50%;
-	left: calc( 1920px - 410px);
+	left: calc( 1920px - 475px);
 	display: flex;
 	transform: translateY(-50%);
 	height: 100%;
