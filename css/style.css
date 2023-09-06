@@ -3,8 +3,6 @@ body{
   background-color: black;
   font-family: Noto Sans;
   white-space: nowrap;
-  width: 960px;
-  margin:auto；
 }
 
 /*ヘッダーはここから*/
@@ -20,7 +18,7 @@ body{
 .header-logo{
 	position: absolute;
 	top: 10px;
-	left: 139px;
+	left: 232px;
 	height: 100%;
 }
 .header-logo a{
@@ -34,7 +32,7 @@ body{
 .header-nav{
 	position: absolute;
 	top: 50%;
-	left: 978px;
+	left: calc( 1920px - 410px);
 	display: flex;
 	transform: translateY(-50%);
 	height: 100%;
@@ -58,7 +56,7 @@ body{
   position: absolute;
   text-decoration: none;
   top: 80px;
-  left: 600px;
+  left: calc( 600px + 277px);
   display: flex;
 	align-items: center;
 }
@@ -74,7 +72,7 @@ body{
   position: absolute;
   text-decoration: none;
   top: 180px;
-  left: 598px;
+  left: calc( 598px + 277px);
   display: flex;
 	align-items: center;
 }
@@ -90,7 +88,7 @@ body{
   position: absolute;
   text-decoration: none;
   top: 257px;
-  left: 540px;
+  left: calc( 540px + 277px);
 	align-items: center;
 }
 .about-profile p{
@@ -105,7 +103,7 @@ body{
   position: absolute;
   text-decoration: none;
   top: 433px;
-  left: 614px;
+  left: calc( 614px + 277px );
 	align-items: center;
 }
 .education p{
@@ -119,7 +117,7 @@ body{
   position: absolute;
   text-decoration: none;
   top: 487px;
-  left: 311px;
+  left: calc( 311px + 277px);
 	align-items: center;
 }
 .education-when p{
@@ -134,7 +132,7 @@ body{
   position: absolute;
   text-decoration: none;
   top: 487px;
-  left: 476px;
+  left: calc( 476px + 277px);
 	align-items: center;
 }
 .education-what p{
@@ -152,7 +150,7 @@ body{
   position: absolute;
   text-decoration: none;
   top: 803px;
-  left: 613px;
+  left: calc( 613px + 277px);
 	align-items: center;
 }
 .skill p{
@@ -166,7 +164,7 @@ body{
   position: absolute;
   text-decoration: none;
   top: 898px;
-  left: 645px;
+  left: calc( 645px + 277px);
 	align-items: center;
 }
 .skill-tool p{
@@ -180,7 +178,7 @@ body{
   position: absolute;
   text-decoration: none;
   top: 960px;
-  left: 490px;
+  left: calc( 490px + 277px);
 	align-items: center;
 }
 .skill-tool-img img{
@@ -190,7 +188,7 @@ body{
   position: absolute;
   text-decoration: none;
   top: 1080px;
-  left: 585px;
+  left: calc( 585px + 277px);
 	align-items: center;
 }
 .skill-programming p{
@@ -204,7 +202,7 @@ body{
   position: absolute;
   text-decoration: none;
   top: 1125px;
-  left: 460px;
+  left: calc( 460px + 277px);
 	align-items: center;
 }
 .skill-programming-what p{
@@ -217,3 +215,126 @@ body{
 	align-items: center;
 }
 /*SKILLはここまで*/
+
+/*LEARNはここから*/
+/*.section{
+  padding: 100px 0 100px 0;
+}*/
+.learn{
+  position: absolute;
+  text-decoration: none;
+  top: 1335px;
+  left: calc( 606px + 277px);
+	align-items: center;
+}
+.learn p{
+  color: #FFF;
+	text-decoration: none;
+	font-size: 48px;
+	height: 100%;
+	align-items: center;
+}
+.learn-text{
+  position: absolute;
+  text-decoration: none;
+  top: 1430px;
+  left: calc( 442px + 277px);
+	align-items: center;
+}
+.learn-text p{
+  color: #FFF;
+	text-decoration: none;
+	font-size: 24px;
+	height: 100%;
+	align-items: center;
+}
+.courses{
+  margin-top: 1530px;
+  display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.course{
+  width: 350px;
+  height: 360px;
+  box-shadow: 0 0 4px #FFF;
+  margin-right: 20px;
+	margin-bottom: 50px;
+	border-radius: 4px;
+}
+.course:last-child,
+.course:nth-child(4n){
+	margin-right: 0;
+}
+.course:nth-child(n + 5) {
+	margin-bottom: 0;
+}
+.course-img {
+  width: 350px;
+}
+.course-img img{
+  width: 100%;
+}
+.course-title{
+	color: #FFF;
+  text-decoration: none;
+	font-size: 24px;
+	text-align: left;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 8px;
+  display: block;
+}
+.course-langage{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.course-langage p{
+  color: #797979;
+	text-decoration: none;
+	font-size: 12px;
+	height: 100%;
+	align-items: center;
+  margin-bottom: 5px;
+}
+/*LEARNはここまで*/
+
+/*フッターはここから*/
+.footer{
+	position: relative;
+	padding: 50px 0 25px 0;
+	background-color: #000;
+}
+.footer-logo{
+  position: absolute;
+	left: 45%;
+}
+.footer-logo a{
+  color: #FFF;
+	text-decoration: none;
+	font-size: 24px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.footer-nav{
+	text-align: center;
+	margin-top: 50px;
+  margin-bottom: 40px;
+}
+.footer-nav a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 12px;
+	margin-right: 20px;
+}
+.footer-nav a:last-child{
+	margin-right: 0;
+}
+.copyright{
+	color: #fff;
+	text-align: center;
+	font-size: 11px;
+}
+/*フッターはここまで*/
