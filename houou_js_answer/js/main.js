@@ -27,12 +27,12 @@ $(function(){
 		let html_template = '';
 		let delate_dom = '';
 		if(delate_btn_flg){
-			delate_dom = '<div class="cart-delate"><img src="img/icon_delete.svg"></div>';
+			delate_dom = '<div class="cart-delate"><img src="./img/icon_delete.svg"></div>';
 		}
 		items.forEach(function(item, index){
 			html_template += `<li class="item" data-item-id="${item['id']}">
 			    <a href="detail.html?id=${item['id']}">
-			      <div class="item-cap"><img src="./img/item/${item['id']}.png" loading="lazy"></div>
+			      <div class="item-cap"><img src="../img/item/${item['id']}.png" loading="lazy"></div>
 			      <div class="item-info">
 			        <h3 class="item-name">${item['name']}</h3>
 			        <p class="item-text">${item['text']}</p>
@@ -353,8 +353,8 @@ $(function(){
 		Object.keys(item_detail).forEach(function(key){
 			$(`[data-item-parts="${key}"]`).text(item_detail[key]);
 		});
-		$('#zoom-img').attr('src', `./img/item/${item_detail['id']}.png`);
-		$('#zoom-img').attr('data-zoom-image', `./img/item/${item_detail['id']}_l.png`);
+		$('#zoom-img').attr('src', `../img/item/${item_detail['id']}.png`);
+		$('#zoom-img').attr('data-zoom-image', `../img/item/${item_detail['id']}_l.png`);
 		$('.item-detail').attr('data-item-id', item_detail['id']);
 		if( !item_detail['new'] ){
 			$('.new-label').remove();
