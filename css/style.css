@@ -263,10 +263,10 @@ body{
 	border-radius: 4px;
 }
 .course:last-child,
-.course:nth-child(4n){
+.course:nth-child(5n){
 	margin-right: 0;
 }
-.course:nth-child(n + 5) {
+.course:nth-child(n + 6) {
 	margin-bottom: 0;
 }
 .course-img {
